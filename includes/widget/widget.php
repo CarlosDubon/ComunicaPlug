@@ -28,13 +28,14 @@ class radio extends WP_Widget {
     function update($new_instance, $old_instance){
         // Función de guardado de opciones
         $instance = $old_instance;
-        $instance['url']=sanitize_text_field($new_instance['url']);
+        $instance['url']=wp_strip_all_tags($new_instance['url']);
         return $instance;
     }
 
     function form($instance){
         $defaults = array ('image'=>'','url'=>'');
-        $instance = wp_parse_args((array)$instance,$defaults);
+        
+        extract(wp_parse_args((array)$instance,$defaults));
         $image=$instance['image'];
         $url=$instance['url'];
         ?>
