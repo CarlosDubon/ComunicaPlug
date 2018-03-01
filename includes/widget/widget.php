@@ -10,6 +10,8 @@ class radio extends WP_Widget {
 
     function widget($args,$instance){
         // Contenido del Widget que se mostrará en la Sidebar
+        extract($args);
+        $url = $intance['url'];
         echo $before_widget;
         ?>
         <div class="col-md-6">
@@ -17,7 +19,7 @@ class radio extends WP_Widget {
               <div class="card-header">Header</div>
               <div class="card-body">
                 <h4 class="card-title">Primary card title</h4>
-                <p class="card-text"><?php echo $instance["ruta"] ?></p>
+                <p class="card-text"><?php echo $url; ?></p>
               </div>
             </div>
         </div>
@@ -28,17 +30,20 @@ class radio extends WP_Widget {
     function update($new_instance, $old_instance){
         // Función de guardado de opciones
         $instance = $old_instance;
-        $instance["ruta"]=strip_tags($new_instance["ruta"]);
+        $instance['url']=sanitize_text_field($new_instance['url']);
         return $instance;
     }
 
     function form($instance){
-        // Formulario de opciones del Widget, que aparece cuando añadimos el Widget a una Sidebar
+        $defaults = array ('image'=>'','url'=>'');
+        $instance = wp_parse_args((array)$instance,$defaults);
+        $image=$instance['image'];
+        $url=$instance['url'];
         ?>
-        <p>
-            <label for="<?php echo $this->get_field_id('ruta') ?>">URL</label>
-            <input class="widefat" id="<?php echo $this->get_field_id('ruta'); ?>" type="text" name="<?php echo $this->get_field_name('ruta'); ?>" value="<?php esc_attr($instance['ruta']); ?>">
-        </p>
+            <p>
+                <label>URL</label>
+                <input class="widefat" type="text" name="<?php echo $this->get_field_name('url'); ?>" value="<?php echo esc_attr($url);  ?>">
+            </p>
         <?php
     }
 }
