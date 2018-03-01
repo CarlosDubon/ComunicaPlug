@@ -28,7 +28,7 @@ class radio extends WP_Widget {
     function update($new_instance, $old_instance){
         // Función de guardado de opciones
         $instance = $old_instance;
-        $instance["ruta"]=strip_tags($new_instance['ruta']);
+        $instance["ruta"]=strip_tags($new_instance["ruta"]);
         return instance;
     }
 
@@ -37,7 +37,7 @@ class radio extends WP_Widget {
         ?>
         <p>
             <label for="<?php echo $this->get_field_id('ruta') ?>">URL</label>
-            <input class="widefat" id="<?php echo $this->get_field_id('ruta'); ?>" type="text" name="<?php echo $this->get_field_name('ruta'); ?>" value="<?php esc_attr($instace['ruta']); ?>">
+            <input class="widefat" id="<?php echo $this->get_field_id('ruta'); ?>" type="text" name="<?php echo $this->get_field_name('ruta'); ?>" value="<?php esc_attr($instance['ruta']); ?>">
         </p>
         <?php
     }
