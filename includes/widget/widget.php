@@ -43,6 +43,7 @@ class radio extends WP_Widget {
                 <label>URL</label>
                 <input class="widefat" type="text" name="<?php echo $this->get_field_name('url'); ?>" value="<?php echo esc_attr($url);  ?>">
             </p>
+            <div class="placeholder">No Hay imagen Seleccionada</div>
         <?php
     }
 }
