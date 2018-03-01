@@ -34,6 +34,12 @@ class radio extends WP_Widget {
 
     function form($instance){
         // Formulario de opciones del Widget, que aparece cuando añadimos el Widget a una Sidebar
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id('ruta') ?>">URL</label>
+            <input class="widefat" id="<?php echo $this->get_field_id('ruta'); ?>" type="text" name="<?php echo $this->get_field_name('ruta'); ?>" value="<?php esc_attr($instace['ruta']); ?>">
+        </p>
+        <?php
     }
 }
 
