@@ -12,7 +12,6 @@ class radio extends WP_Widget {
         // Contenido del Widget que se mostrará en la Sidebar
         extract($args);
         $url = $intance['url'];
-        echo $before_widget;
         ?>
         <div class="col-md-6">
             <div class="card text-white bg-primary mb-3">
@@ -24,7 +23,6 @@ class radio extends WP_Widget {
             </div>
         </div>
         <?php
-        echo $after_widget;
     }
 
     function update($new_instance, $old_instance){
