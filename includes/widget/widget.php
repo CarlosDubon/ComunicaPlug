@@ -27,6 +27,9 @@ class radio extends WP_Widget {
 
     function update($new_instance, $old_instance){
         // Función de guardado de opciones
+        $instance = $old_instance;
+        $instance["ruta"]=strip_tags($new_instance['ruta']);
+        return instance;
     }
 
     function form($instance){
