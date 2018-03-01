@@ -11,7 +11,7 @@ class radio extends WP_Widget {
     function widget($args,$instance){
         // Contenido del Widget que se mostrará en la Sidebar
         extract($args);
-        $url = $intance['url'];
+        $url = $instance['url'];
         ?>
         <div class="col-md-6">
             <div class="card text-white bg-primary mb-3">
