@@ -5,7 +5,7 @@ class radio extends WP_Widget {
     function radio(){
         // Constructor del Widget.
         $widget_ops = array('classname'=>'radio', 'description'=>'utilidades para theme Comunica');
-        $this->WP_Widget('radio','Utilidades para theme comunica',$widget_ops);
+        $this->WP_Widget('radio','Radio Comunica',$widget_ops);
     }
 
     function widget($args,$instance){
