@@ -4,7 +4,7 @@ class radio extends WP_Widget {
 
     function radio(){
         // Constructor del Widget.
-        $widget_ops = array('classname'=>'radio', 'description'=>'utilidades para theme Comunica');
+        $widget_ops = array('classname'=>'radio', 'description'=>'Agrega una radio del departamento de comunicaciones');
         $this->WP_Widget('radio','Radio Comunica',$widget_ops);
     }
 
@@ -12,7 +12,7 @@ class radio extends WP_Widget {
         // Contenido del Widget que se mostrará en la Sidebar
         echo $before_widget;
         ?>
-        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card text-white bg-primary mb-3">
           <div class="card-header">Header</div>
           <div class="card-body">
             <h4 class="card-title">Primary card title</h4>
