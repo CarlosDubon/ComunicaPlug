@@ -7,9 +7,9 @@
 */
 
 function ComunicaPlug(){
-    include_once(plugin_dir_path( __FILE__ ).'/includes/widget/ISlider.php');
+    require(plugin_dir_path( __FILE__ ).'/includes/widget/ISlider.php');
     register_widget('ISlider');
-    include(plugin_dir_path( __FILE__ ).'/includes/widget/FSlider.php');
+    require(plugin_dir_path( __FILE__ ).'/includes/widget/FSlider.php');
     register_widget('FSlider');
 }
 add_action('widgets_init','ComunicaPlug');
