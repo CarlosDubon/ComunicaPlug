@@ -5,7 +5,7 @@ class Podcast extends WP_Widget {
     function __construct(){
         // Constructor del Widget.
         $widget_ops = array('classname'=>'Podcast', 'description'=>'Podcast');
-        $this->parent::__construct('Podcast','Crea tu podcasr',$widget_ops);
+        parent::__construct('Podcast','Crea tu podcasr',$widget_ops);
     }
 
     function widget($args,$instance){
