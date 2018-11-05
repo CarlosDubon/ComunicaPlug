@@ -2,7 +2,7 @@
 
 class ISlider extends WP_Widget {
 
-    function ISlider(){
+    function __construct(){
         // Constructor del Widget.
         $widget_ops = array('classname'=>'Slider', 'description'=>'Inicia un nuevo slider');
         $this->WP_Widget('ISlider','Inicio de Slider <slider>',$widget_ops);

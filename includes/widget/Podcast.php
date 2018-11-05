@@ -2,7 +2,7 @@
 
 class Podcast extends WP_Widget {
 
-    function Podcast(){
+    function __construct(){
         // Constructor del Widget.
         $widget_ops = array('classname'=>'Podcast', 'description'=>'Podcast');
         $this->WP_Widget('Podcast','Crea tu podcasr',$widget_ops);
