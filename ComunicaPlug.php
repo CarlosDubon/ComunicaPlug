@@ -13,5 +13,7 @@ function ComunicaPlug(){
     register_widget('FSlider');
     require plugin_dir_path( __FILE__ ).'/includes/widget/Podcast.php';
     register_widget('Podcast');
+    require plugin_dir_path( __FILE__ ).'/includes/widget/ComunicaAds.php';
+    register_widget('ComunicaAds');
 }
 add_action('widgets_init','ComunicaPlug');
